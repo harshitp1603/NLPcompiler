@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Code Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-code"></i> AI Code Generator</h1>
+      <p class="subtitle">Transform your ideas into code instantly</p>
+    </header>
+
+    <main>
+      <div class="input-section">
+        <div class="input-wrapper">
+          <textarea id="instruction" placeholder="Describe what you want to build...&#10;Example: Create a function that calculates the factorial of a number"></textarea>
+          <button onclick="sendInstruction()" class="generate-btn">
+            <i class="fas fa-magic"></i> Generate Code
+          </button>
+        </div>
+      </div>
+
+      <div class="output-container">
+        <div class="output-section">
+          <div class="output-header">
+            <h2><i class="fas fa-code"></i> Generated Code</h2>
+            <button class="copy-btn" onclick="copyCode()">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+          </div>
+          <pre id="codeOutput"></pre>
+        </div>
+
+        <div class="output-section">
+          <div class="output-header">
+            <h2><i class="fas fa-terminal"></i> Execution Output</h2>
+          </div>
+          <pre id="execOutput"></pre>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
